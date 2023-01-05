@@ -1,0 +1,20 @@
+server:
+  port: 8085
+
+spring:
+  datasource:
+    url: jdbc:mariadb://localhost:3306/banking_core_utility_payment_service
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: create
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8081/eureka
+
+info:
+  app:
+    name: ${spring.application.name}
